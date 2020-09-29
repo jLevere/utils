@@ -19,18 +19,29 @@ public class Factor {
         System.out.print("Show non factors? y/n: ");
         String showFac = input.nextLine();
 
+        //loop through numbers and mod them to check if factor
         int mod = -1;
         int otherFactor = -1;
+        int count = 0;
         for (int i = 1; i < (num/2)+1; i++) {
+
+            //do the math
             mod = num % i;
             otherFactor = num/i;
+
+            //print output
             if (mod == 0) {
                 System.out.println(i + " * " + otherFactor);
+                count++;
             } else if (showFac.equals("y")) {
                 System.out.println(i + " not");
-            }          
+            }  
         }
 
+        //give prime warning if only one factor
+        if (count == 1) System.out.println("might be prime");
+
         input.close();
+        
     }
 }
