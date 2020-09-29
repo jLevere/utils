@@ -16,12 +16,14 @@ public class Factor {
         //get input
         System.out.print("Enter a number: ");
         int num = Integer.parseInt(input.nextLine());
+        System.out.print("Show non factors? y/n: ");
+        String showFac = input.nextLine();
 
 
-        for (int i = 1; i < (num/2); i++) {
+        for (int i = 1; i < (num/2)+1; i++) {
             if (num % i == 0) {
                 System.out.println(i + " factor");
-            } else {
+            } else if (showFac.equals("y")) {
                 System.out.println(i + " not");
             }          
         }
