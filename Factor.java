@@ -6,7 +6,6 @@
 import java.util.Scanner;
 
 public class Factor {
-    
 
     public static void main(String[] args) {
 
@@ -23,15 +22,21 @@ public class Factor {
         int mod = -1;
         int otherFactor = -1;
         int count = 0;
+        int dif;
+        int sum;
+        System.out.println("first * second | sum : dif");
         for (int i = 1; i < (num/2)+1; i++) {
 
             //do the math
             mod = num % i;
             otherFactor = num/i;
+            
 
             //print output
             if (mod == 0) {
-                System.out.println(i + " * " + otherFactor);
+                dif = i - otherFactor;
+                sum = i + otherFactor;
+                System.out.println(i + " * " + otherFactor + " | " + sum + " : " + dif);
                 count++;
             } else if (showFac.equals("y")) {
                 System.out.println(i + " not");
