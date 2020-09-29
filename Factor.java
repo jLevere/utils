@@ -25,7 +25,7 @@ public class Factor {
             mod = num % i;
             otherFactor = num/i;
             if (mod == 0) {
-                System.out.println(i + " and " + otherFactor + " are factors");
+                System.out.println(i + " * " + otherFactor);
             } else if (showFac.equals("y")) {
                 System.out.println(i + " not");
             }          
