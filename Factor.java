@@ -19,10 +19,13 @@ public class Factor {
         System.out.print("Show non factors? y/n: ");
         String showFac = input.nextLine();
 
-
+        int mod = -1;
+        int otherFactor = -1;
         for (int i = 1; i < (num/2)+1; i++) {
-            if (num % i == 0) {
-                System.out.println(i + " factor");
+            mod = num % i;
+            otherFactor = num/i;
+            if (mod == 0) {
+                System.out.println(i + " and " + otherFactor + " are factors");
             } else if (showFac.equals("y")) {
                 System.out.println(i + " not");
             }          
