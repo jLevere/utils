@@ -1,5 +1,5 @@
 /**
- * Prints the factors of a given number
+ * Prints the factors of a given number and their sum and difference
  * @author jackson (leverett.3@osu.edu)
  * @version 20200929
  */
