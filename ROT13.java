@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ROT13 {
 
     /**
@@ -15,10 +17,13 @@ public class ROT13 {
 
             if (c >= 'a' && c <= 'm') {
                 c += 13;
+
             } else if (c >= 'A' && c <= 'M') {
                 c += 13;
+
             } else if (c >= 'n' && c <= 'z') {
                 c -= 13;
+
             } else if (c >= 'N' && c <= 'Z') {
                 c -= 13;
             }
@@ -28,4 +33,13 @@ public class ROT13 {
 
         return sb.toString();
     }
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter a string to encode: ");
+        String input = keyboard.nextLine();
+        String encoded = rot13(input);
+        System.out.println("Your string encoded is  : " + encoded);
+        keyboard.close();
+    }
+
 }
