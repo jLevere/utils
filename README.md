@@ -1,2 +1,2 @@
 # utils
-random small utils
+random small java utils
